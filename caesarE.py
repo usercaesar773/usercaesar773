@@ -7,7 +7,7 @@ except:
 try:
 	import requests
 except:
-	os.system('pip install py')
+	os.system('pip install requests')
 	import requests
 try:
 	import pyfiglet
