@@ -1,3 +1,19 @@
+import os
+try:
+	import webbrowser
+except:
+	os.system('pip install webbrowser')
+	import webbrowser
+try:
+	import requests
+except:
+	os.system('pip install py')
+	import requests
+try:
+	import pyfiglet
+except:
+	os.system('pip install pyfiglet')
+	import pyfiglet
 import requests
 import pyfiglet
 import webbrowser
