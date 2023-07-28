@@ -1,4 +1,6 @@
-import requests,pyfiglet,webbrowser
+import requests
+import pyfiglet
+import webbrowser
 B = '\033[2;36m'#س
 Z = '\033[1;31m' #احمر
 h ='\033[1;101m\033[1;32m'
