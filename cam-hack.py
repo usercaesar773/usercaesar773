@@ -3,15 +3,11 @@
 #-*- coding: utf-8 -*-
 #github.com/AngelSecurityTeam/Cam-Hackers
 
-import requests, re , colorama ,random,pyfiglet,webbrowser
+import requests, re , colorama ,random
 from requests.structures import CaseInsensitiveDict
 colorama.init()
-h ='\033[1;104m\033[1;33m'#احمر ور
+
 url = "http://www.insecam.org/en/jsoncountries/"
-import requests
-import os
-import time
-from time import sleep
 
 headers = CaseInsensitiveDict()
 headers["Accept"] = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
@@ -21,16 +17,21 @@ headers["Host"] = "www.insecam.org"
 headers["Upgrade-Insecure-Requests"] = "1"
 headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
 
-print(f'{h}')
+
 resp = requests.get(url, headers=headers)
 
 data = resp.json()
 countries = data['countries']
-nam = 'HACK-Cam'
-print(pyfiglet.figlet_format(nam,font='big'))
-print ('''
-channel : @exhausted93''')
-print('_'*40)
+
+print("""
+\033[1;31m\033[1;37m ██████╗ █████╗ ███╗   ███╗      ██╗  ██╗ █████╗  ██████╗██╗  ██╗███████╗██████╗ ███████╗
+██╔════╝██╔══██╗████╗ ████║      ██║  ██║██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗██╔════╝
+██║     ███████║██╔████╔██║█████╗███████║███████║██║     █████╔╝ █████╗  ██████╔╝███████╗
+██║     ██╔══██║██║╚██╔╝██║╚════╝██╔══██║██╔══██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗╚════██║
+╚██████╗██║  ██║██║ ╚═╝ ██║      ██║  ██║██║  ██║╚██████╗██║  ██╗███████╗██║  ██║███████║
+\033[1;31m ╚═════╝╚═╝  ╚═╝╚═╝     ╚═╝      ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝
+\033[1;31m                                                                        ANGELSECURITYTEAM \033[1;31m\033[1;37m""")
+
 for key, value in countries.items():
     print(f'Code : ({key}) - {value["country"]} / ({value["count"]})  ')
     print("")
@@ -38,11 +39,9 @@ for key, value in countries.items():
 
 
 try:
-    print('_'*40)
-    print('channel : @exhausted93')
-    print('_'*40)
+   
+
     country = input("Code(##) : ")
-    webbrowser.open('https://t.me/exhausted93')
     res = requests.get(
         f"http://www.insecam.org/en/bycountry/{country}", headers=headers
     )
